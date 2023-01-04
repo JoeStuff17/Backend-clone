@@ -6,14 +6,14 @@ import { CreateUserProfileDto, UpdateProfileDto } from './dto/userprofile.dto';
 export class UserprofileController {
     constructor(private readonly userprofileService: UserprofileService){}
 
-    @Post()
+    @Post('/')
     @UsePipes(ValidationPipe)
     createUser(@Body() createUserProfileDto: CreateUserProfileDto){
         // createUserProfileDto.profileImage = createUserProfileDto.profileImage ? createUserProfileDto.profileImage : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVAOn8H2ZmGrPf8tk69GWZuY8RvmnvC9svCw&usqp=CAU';
         return this.userprofileService.createUser(createUserProfileDto)
     }
 
-    @Get()
+    @Get('/')
     async getProfile() {
         return this.userprofileService.findProfile();
     }
