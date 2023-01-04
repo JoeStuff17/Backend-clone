@@ -8,17 +8,10 @@ import { CompanyService } from './company/company.service';
 import { UserprofileController } from './userprofile/userprofile.controller';
 
 @Module({
-    controllers: [CompanyController,
-        UserprofileController],
+    controllers: [CompanyController, UserprofileController],
 
-    providers: [CompanyService,
-        UserprofileService],
+    providers: [CompanyService, UserprofileService],
 
-    imports: [
-        TypeOrmModule.forFeature([
-            CompanyEntity,
-            UserProfileEntity
-        ])
-    ],
+    imports: [TypeOrmModule.forFeature([CompanyEntity, UserProfileEntity])],
 })
 export class TableModule { }
