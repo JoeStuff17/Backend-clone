@@ -10,11 +10,11 @@ import { CompanyEntity } from './tables/company/entity/company.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '51.81.151.210',
+      host: 'test.cowav2yymmkc.ap-south-1.rds.amazonaws.com',
       port: 3306,
-      username: 'axiomcon_jothiraj',
-      password: '^;PNRpP~nvQn',
-      database: 'axiomcon_jothiraj',
+      username: 'admin',
+      password: 'adminJoe',
+      database: 'linkedIn',
       entities: [CompanyEntity, UserProfileEntity],
       synchronize: true,
     }),

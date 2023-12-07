@@ -1,10 +1,13 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity({ name: 'company' })
-
-
 export class CompanyEntity {
-
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -17,13 +20,13 @@ export class CompanyEntity {
   @Column()
   source: string;
 
-  @Column({nullable:true})
+  @Column({ nullable: true })
   profileImage: string;
 
-  @Column({nullable:true})
+  @Column({ nullable: true })
   uploadImage: string;
 
-  @Column({nullable:true})
+  @Column({ nullable: true })
   message: string;
 
   @CreateDateColumn()
@@ -31,5 +34,4 @@ export class CompanyEntity {
 
   @UpdateDateColumn()
   updatedAt: Date;
-
 }
